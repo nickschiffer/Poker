@@ -29,7 +29,11 @@ public:
 
 	}
 	void shuffle() {
-		random_shuffle(deck.begin(), deck.end(), myrandom);
+		srand(time(NULL));
+		for (int i = 0; i < 10; i++) {
+			random_shuffle(deck.begin(), deck.end());
+		}
+		//random_shuffle(deck.begin(), deck.end(), myrandom);
 
 	}
 	vector<Card> deal() {
@@ -50,7 +54,6 @@ public:
 private:
 	vector<Card> deck;
 	static int myrandom(int i) {
-		srand(time(NULL));
 		return rand() % i;
 	}
 

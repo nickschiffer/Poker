@@ -85,9 +85,7 @@ void Poker::discard(int indx) {
 	cin.clear();
 
 	vector<Card> tempHand = p.getHand();
-	if (choice == 0) {
-
-	} else {
+	if (choice != 0) {
 		for (int i = 0; i < choice; i++) {
 			int j = 0;
 			cout << "Card #" << i + 1 << " of " << choice << ".\n\n";
@@ -149,7 +147,6 @@ vector<Player> Poker::winner() {
 				winners.push_back(p);
 			}
 		}
-		//if (winners[0].getScore() == )
 
 		if (winners.size() > 1) {
 			sort(winners.begin(), winners.end(), customLessVal);
@@ -181,7 +178,6 @@ vector<Player> Poker::winner() {
 				winners.push_back(p);
 			}
 		}
-		//if (winners[0].getScore() == )
 
 		if (winners.size() > 1) {
 			sort(winners.begin(), winners.end(), customLessValWin);
